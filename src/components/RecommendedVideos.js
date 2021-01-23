@@ -1,10 +1,22 @@
 import React from 'react';
 import './RecommendedVideos.css';
+import Video from './Video';
 
 function RecommendedVideos() {
     return (
         <div className="recommended">
-            <h1>Soy un videobox</h1>
+            <h2>Recommended</h2>
+            <div className="videos"></div>
+            <Video />
+            <Video />
+            <Video />
+            <Video />
+            <Video />
+            <Video />
+            <Video />
+            <Video />
+            <Video />
+            <Video />
         </div>
     )
 }
