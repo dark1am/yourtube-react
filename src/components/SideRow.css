@@ -1,0 +1,32 @@
+.siderow{
+    display:flex;
+    align-items: center;
+    padding:10px 30px;
+}
+
+.siderow:hover{
+    background:rgb(34,34,34);
+    cursor:pointer;
+}
+
+.siderow_icon{
+    font-size:large !important;
+    color:grey;
+}
+
+.siderow_title{
+    text-align:left;
+    padding:15px;
+    flex:1;
+    font-size:14px;
+}
+
+.siderow:hover > .siderow_icon{
+    color:red;
+}
+.siderow.selected{
+    background:rgb(34,34,34);
+}
+.siderow.selected > .siderow_icon{
+    color:red;
+}
