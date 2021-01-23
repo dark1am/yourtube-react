@@ -7,7 +7,10 @@ function Nav(){
         <nav>
             <div className="logo">
                 <i class="fas fa-bars"></i>
-                <img src={ Youtube } alt=""/>
+                <div className="thelogo">
+                    <img src={ Youtube } alt=""/>
+                    <h5>AR</h5>
+                </div>
             </div>
 
             <div className="search">

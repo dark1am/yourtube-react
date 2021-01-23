@@ -21,12 +21,27 @@ nav .logo{
 
 nav .logo img{
     object-fit:contain;
-    width:100px;
+    width:80px;
+    cursor:pointer;
 }
+
+nav .logo .thelogo h5{
+    color:lightgray;
+    font-size: 10px;
+    margin-top:9px;
+    margin-left:3px;
+    font-weight: 100;
+}
+
+nav .logo .thelogo{
+    display:flex;
+}
+
 
 nav .logo i{
     color:white;
     padding:10px;
+    cursor:pointer;
 }
 
 nav .buttons{
@@ -63,6 +78,7 @@ nav .search .search-bar input{
     height:30px;
     outline:none;
     padding-left:10px;
+    color:white;
 }
 
 nav .search .search-bar input::placeholder{
@@ -77,7 +93,11 @@ nav .search .search-bar i{
     color:rgb(88, 86, 86);
 }
 
-nav .search .search-bar i:hover{
+nav .search .search-bar i{
+    cursor:pointer;
+}
+
+nav .search i{
     cursor:pointer;
 }
 
@@ -90,6 +110,7 @@ nav .buttons{
 
 nav .buttons i{
     color:white;
+    cursor:pointer;
 }
 
 nav .buttons .sign-btn{
@@ -99,6 +120,7 @@ nav .buttons .sign-btn{
     display:flex;
     justify-content: space-around;
     border-radius:5%;
+    cursor:pointer;
 }
 
 nav .buttons .sign-btn i{

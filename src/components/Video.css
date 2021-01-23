@@ -1,0 +1,26 @@
+.videoCard{
+    width:270px;
+    margin-bottom: 40px;
+}
+.thumbnail{
+    height: 140px;
+    width: 250px;
+}
+.videoInfo{
+    display:flex;
+    margin-top:10px;
+    padding-right: 30px;;
+}
+.cardText{
+    margin-left:15px;
+}
+.cardText h4{
+    margin-bottom:5px;
+}
+.cardText p{
+    color:lightgray;
+}
+.cardAvatar{
+    height:40px !important;
+    width:40px !important;
+}

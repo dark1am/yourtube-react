@@ -2,17 +2,24 @@ import React from 'react';
 import './Video.css';
 import Avatar from '@material-ui/core/Avatar';
 
-function Video({ image, channelImage, url, title, views, timestamp, channel }) {
+function Video({ image, channelImage, title, views, timestamp, channel }) {
     return (
         <div className="videoCard"> 
-            <img src={ image } alt=""/>
-            <div className="videoInfo"></div>
-            <Avatar 
-                className="cardAvatar" 
-                src={channelImage} 
-                alt={channel} 
-            />
-            
+            <img className="thumbnail" src={ image } alt=""/>
+            <div className="videoInfo">
+                <Avatar 
+                    className="cardAvatar" 
+                    src={channelImage} 
+                    alt={channel} 
+                />
+                <div className="cardText">
+                    <h4>{title}</h4>
+                    <p>{channel}</p>
+                    <p>
+                        {views} • {timestamp}
+                    </p>
+                </div>
+            </div>
         </div>
     )
 }
