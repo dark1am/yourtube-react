@@ -9,6 +9,6 @@ body{
 .App {
   text-align: center;
 }
-.content{
+.app__page{
   display:flex;
 }

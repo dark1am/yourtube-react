@@ -1,22 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Youtube from '../yt-logo.png';
 import './Nav.css';
+import {Link} from 'react-router-dom';
 
 function Nav(){
+
+    const [inputSearch, setInputSearch] = useState('');
+
     return (
         <nav>
             <div className="logo">
                 <i class="fas fa-bars"></i>
                 <div className="thelogo">
+                    <Link to="/home">
                     <img src={ Youtube } alt=""/>
+                    </Link>
                     <h5>AR</h5>
                 </div>
             </div>
 
             <div className="search">
                 <div className="search-bar">
-                    <input placeholder="Search" type="text"/>
-                    <i class="fas fa-search"></i>
+                    <input 
+                    onChange={(e) => setInputSearch(e.target.value)} 
+                    value={inputSearch} 
+                    placeholder="Search" 
+                    type="text"
+                    />
+                    <Link to={`/search/${inputSearch}`}>
+                        <i class="fas fa-search"></i>
+                    </Link>
                 </div>
                 <i class="fas fa-microphone"></i>
             </div>

@@ -2,7 +2,9 @@ import './App.css';
 import Nav from './components/Nav';
 import Sidebar from './components/Sidebar';
 import RecommendedVideos from './components/RecommendedVideos';
+import SearchPage from './components/SearchPage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 
 function App() {
   return (
@@ -13,16 +15,20 @@ function App() {
         <Switch> 
 
           {/* RUTA RAIZ */}
-          <Route path="/">
-            <div className="content">
+
+          <Route path="/home">
+            <div className="app__page">
             <Sidebar />
             <RecommendedVideos />
             </div>
           </Route>
 
           {/* RUTA DE BUSQUEDA */}
-          <Route path="/search">
-            <h2>Ruta de busqueda</h2>
+          <Route path="/search/:searchTerm">
+            <div className="app__page">
+              <Sidebar />
+              <SearchPage />
+            </div>
           </Route>
 
         </Switch>

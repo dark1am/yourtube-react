@@ -5,22 +5,29 @@
 .thumbnail{
     height: 140px;
     width: 250px;
+    cursor:pointer;
 }
 .videoInfo{
     display:flex;
     margin-top:10px;
-    padding-right: 30px;;
+    padding-right: 30px;
 }
 .cardText{
     margin-left:15px;
 }
 .cardText h4{
     margin-bottom:5px;
+    cursor:pointer;
 }
 .cardText p{
     color:lightgray;
 }
+.channel:hover{
+    color:white;
+    cursor:pointer;
+}
 .cardAvatar{
     height:40px !important;
     width:40px !important;
+    cursor:pointer;
 }

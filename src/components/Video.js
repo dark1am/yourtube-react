@@ -14,7 +14,7 @@ function Video({ image, channelImage, title, views, timestamp, channel }) {
                 />
                 <div className="cardText">
                     <h4>{title}</h4>
-                    <p>{channel}</p>
+                    <p class="channel">{channel}</p>
                     <p>
                         {views} • {timestamp}
                     </p>
