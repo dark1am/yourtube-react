@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar';
 import RecommendedVideos from './components/RecommendedVideos';
 import SearchPage from './components/SearchPage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Ejercicio from './components/Ejercicio';
 
 
 function App() {
@@ -29,6 +30,10 @@ function App() {
               <Sidebar />
               <SearchPage />
             </div>
+          </Route>
+
+          <Route path="/ejercicio">
+            <Ejercicio />
           </Route>
 
         </Switch>
