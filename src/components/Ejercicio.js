@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
+import './Ejercicio.css';
 
 
-
-function Ejercicio() {
+function Ejercicio( {title} ) {
     const [aumentar, setAumentar] = useState(0);
 
     const incrementar = () => {
@@ -13,6 +13,8 @@ function Ejercicio() {
         <div className="ejercicio">
             <button onClick={incrementar}>Aumentar</button>
             <p> {aumentar} </p>
+
+            <h1> {title} </h1>
         </div>
     )
 }

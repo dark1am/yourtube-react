@@ -5,15 +5,19 @@ import RecommendedVideos from './components/RecommendedVideos';
 import SearchPage from './components/SearchPage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Ejercicio from './components/Ejercicio';
-import React, {useEffect} from 'react';
+import React, {useEffect, useState}  from 'react';
 
 
 function App() {
 
   const url = 'https://jsonplaceholder.typicode.com/todos';
+  const [todos, setTodos] = useState();
   const fetchApi = async () => {
     const response = await fetch(url);
-    console.log(response.statusText)
+    console.log(response.status)
+    const responseJSON = await response.json();
+    setTodos(responseJSON);
+    console.log(responseJSON);
   }
   useEffect(() => {
     fetchApi(); 
@@ -44,7 +48,10 @@ function App() {
           </Route>
 
           <Route path="/ejercicio">
-            <Ejercicio />
+            <Ejercicio title= {!todos ?'cargando...': todos.map((todo, index) => {
+              return <li> {todos.userId} </li>
+            })}/>
+            
           </Route>
 
         </Switch>
