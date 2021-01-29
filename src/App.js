@@ -5,9 +5,20 @@ import RecommendedVideos from './components/RecommendedVideos';
 import SearchPage from './components/SearchPage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Ejercicio from './components/Ejercicio';
+import React, {useEffect} from 'react';
 
 
 function App() {
+
+  const url = 'https://jsonplaceholder.typicode.com/todos';
+  const fetchApi = async () => {
+    const response = await fetch(url);
+    console.log(response.statusText)
+  }
+  useEffect(() => {
+    fetchApi(); 
+  }, [])
+
   return (
     <div className="App">
       <Router >
